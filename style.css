@@ -12,10 +12,10 @@ body {
   min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
+/* Ensure the app-container takes full height */
 .app-container {
   position: relative;
   max-width: 70vw;
-  max-height: 80vh; /* Set a maximum height for the container */
   margin: 0 20px;
   padding: 20px;
   background-color: #f8f8f8; /* Light background for the card */
@@ -24,13 +24,22 @@ body {
   box-shadow: 0 8px 50px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for dark mode */
   overflow: hidden; /* Prevent content from overflowing the container */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  max-height: 100vh; /* Prevent overflow beyond the viewport */
+  overflow: hidden; /* Prevent content from spilling outside */
 }
 
+/* Allow the main section to scroll */
 .app-container main {
-  max-height: calc(
-    90vh - 100px
-  ); /* Adjust height to account for padding and other elements */
+  flex: 1; /* Allow the main section to grow and take available space */
   overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding in height calculation */
+  max-height: calc(
+    80vh - 200px
+  ); /* Adjust height to account for padding and other elements */
   padding-right: 10px; /* Add padding for better scrolling experience */
 }
 
