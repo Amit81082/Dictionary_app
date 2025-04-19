@@ -14,8 +14,8 @@ body {
 
 .app-container {
   position: relative;
-  max-width: 800px;
-  max-height: 90vh; /* Set a maximum height for the container */
+  max-width: 70vw;
+  max-height: 80vh; /* Set a maximum height for the container */
   margin: 0 20px;
   padding: 20px;
   background-color: #f8f8f8; /* Light background for the card */
@@ -122,6 +122,7 @@ header {
 /* Search container styling */
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -297,7 +298,7 @@ ul li::marker {
   font-size: 24px;
   font-weight: bold;
   color: #6200ea; /* Purple color to match the theme */
-  margin: 0 0; /* Add spacing around the heading */
+  margin-top: 50px; /* Add spacing around the heading */
   text-transform: uppercase; /* Make the text uppercase for emphasis */
-  letter-spacing: 1.5px; /* Add spacing between letters for a modern look */
+  letter-spacing: 1.3px; /* Add spacing between letters for a modern look */
 }
