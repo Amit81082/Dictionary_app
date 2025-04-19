@@ -24,16 +24,12 @@ A responsive and user-friendly web application that allows users to search for E
 ---
 
 ## 📸 Screenshots
+![image](https://github.com/user-attachments/assets/07c9b947-1204-4d21-87e7-533e9f5099f1)
 
-![App Screenshot](assets/screenshot.png)
-
-_Note: Replace `assets/screenshot.png` with the actual path to your screenshot image._
-
----
 
 ## 🌐 Live Demo
 
-Check out the live version of the app here: [https://amit81082.github.io/Dictionary_app/](https://amit81082.github.io/Dictionary_app/)
+Check out the live version of the app here:  [https://amit81082.github.io/Dictionary_app/](https://amit81082.github.io/Dictionary_app/)
 
 ---
 
