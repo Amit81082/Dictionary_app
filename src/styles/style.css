@@ -1,0 +1,303 @@
+/* Default light mode styles */
+body {
+  font-family: "Sans Serif", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #a066ff, #6200ea); /* Purple gradient */
+  color: #333; /* Default text color for light mode */
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+.app-container {
+  position: relative;
+  max-width: 800px;
+  max-height: 90vh; /* Set a maximum height for the container */
+  margin: 0 20px;
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background for the card */
+  color: #333; /* Default text color for light mode */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for dark mode */
+  overflow: hidden; /* Prevent content from overflowing the container */
+}
+
+.app-container main {
+  max-height: calc(
+    90vh - 100px
+  ); /* Adjust height to account for padding and other elements */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add padding for better scrolling experience */
+}
+
+/* Add a custom scrollbar for better aesthetics */
+.app-container main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-container main::-webkit-scrollbar-thumb {
+  background-color: #6200ea; /* Purple scrollbar */
+  border-radius: 10px;
+}
+
+.app-container main::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Light background for the scrollbar track */
+}
+
+.app-container:hover {
+  transform: scale(1.007); /* Slight zoom effect */
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333; /* Dark background for the body */
+  color: #f9f9f9; /* Light text for contrast */
+}
+
+body.dark-mode .app-container {
+  background-color: #222; /* Dark background for the card */
+  color: #f9f9f9; /* Light text for contrast */
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.8); /* Stronger shadow for dark mode */
+}
+
+body.dark-mode #word,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode ul li {
+  color: #f9f9f9; /* Light text for headings, paragraphs, and list items */
+}
+
+body.dark-mode #search-bar {
+  background-color: #555; /* Darker background for the search bar */
+  color: #fff; /* Light text for the search bar */
+  border-color: #777; /* Subtle border for the search bar */
+}
+
+body.dark-mode #search-button {
+  background-color: #6200ea; /* Purple button for dark mode */
+  color: #fff; /* Light text for the button */
+}
+
+body.dark-mode #audio-button {
+  color: #fff; /* Light color for the audio button */
+}
+
+/* Style for the app logo */
+.app-logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+/* Style for the toggle container */
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+/* Adjust header layout */
+header {
+  margin-top: 50px; /* Add space below the logo and toggle */
+  display: flex;
+  justify-content: center; /* Center the search container */
+  align-items: center;
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px; /* Limit the width of the search bar */
+}
+
+/* Adjust the search bar for a realistic box shadow */
+#search-bar {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid #6200ea; /* Purple bottom border */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+/* Adjust the search button for a realistic box shadow */
+#search-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+#search-button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Style the word section */
+.word-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#word {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; /* Darker text for contrast */
+}
+
+#phonetics {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+.audio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 14px;
+}
+
+/* Style the audio button */
+#audio-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6200ea; /* Purple color for the icon */
+  transition: transform 0.2s ease;
+}
+
+#audio-button:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.definition-section h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.definition-section h2::before,
+.definition-section h3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; /* Light gray line */
+  margin-bottom: 10px; /* Space between the line and the heading */
+}
+
+.definition-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-family: "Roboto", Arial, sans-serif; /* Modern and professional font */
+  font-size: 16px; /* Adjust font size for readability */
+  line-height: 1.6; /* Add line height for better spacing */
+  color: #555; /* Slightly darker text for better contrast */
+}
+
+.definition-section ul li {
+  margin-bottom: 12px; /* Adds space between list items */
+  font-weight: 450; /* Normal font weight for a clean look */
+}
+
+definition-section h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Global list marker style */
+ul li::marker {
+  color: purple;
+}
+
+/* Hide the default checkbox */
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the toggle slider with a box shadow */
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+/* Circle inside the toggle with a box shadow */
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+/* When the checkbox is checked */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #6200ea; /* Purple color */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+  transform: translateX(25px); /* Move the circle to the right */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0.2px 4px rgba(0, 0, 0, 0.1); /* Enhanced realistic shadow */
+}
+
+/* Style for the app heading */
+.app-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6200ea; /* Purple color to match the theme */
+  margin: 0 0; /* Add spacing around the heading */
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  letter-spacing: 1.5px; /* Add spacing between letters for a modern look */
+}

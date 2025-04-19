@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary Clone</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <img src="image.png" alt="Logo" class="app-logo" />
+      <h1 class="app-heading">Dictionary App</h1>
+      <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle" class="toggle-checkbox" />
+        <label for="theme-toggle" class="toggle-label"></label>
+      </div>
+      <header>
+        <div class="search-container">
+          <input
+            id="search-bar"
+            type="text"
+            placeholder="Search for a word..."
+          />
+          <button id="search-button">Search</button>
+        </div>
+      </header>
+      <p
+        id="error-message"
+        style="color: red; font-size: 14px; margin-top: 10gitpx"
+      ></p>
+      <main>
+        <section class="word-section">
+          <div>
+            <h1 id="word" tabindex="0">Keyboard</h1>
+            <p id="phonetics">/ˈkiː.bɔːd/</p>
+          </div>
+          <div class="audio-container">
+            <button id="audio-button">🔊</button>
+          </div>
+        </section>
+        <section class="definition-section">
+          <h2>noun</h2>
+          <ul>
+            <li>A set of keys used to operate a typewriter, computer, etc.</li>
+            <li>A component of many instruments like piano, organ, etc.</li>
+            <li>A device with keys of a musical keyboard.</li>
+          </ul>
+          <h3>Synonyms:</h3>
+          <p>electronic keyboard</p>
+        </section>
+      </main>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
